@@ -4,7 +4,7 @@ To run the app you can run the command:
 ```sh
 docker-compose up --build
 ```
-After running the command you can access 127.0.0.1 and see the app running, or you can run each projects individually.
+After running the command you can access 127.0.0.1/ and see the app running, or you can run each projects individually.
 
 I've already created a default user with some data in it. The users credentials are:
 ```html
