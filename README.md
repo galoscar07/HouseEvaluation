@@ -6,7 +6,7 @@ docker-compose up --build
 ```
 After running the command you can access 127.0.0.1/ and see the app running, or you can run each projects individually.
 
-I've already created a default user with some data in it. The users credentials are:
+I've already created a default user. The users credentials are:
 ```html
 email: admin@admin.com 
 password: adminadmin
