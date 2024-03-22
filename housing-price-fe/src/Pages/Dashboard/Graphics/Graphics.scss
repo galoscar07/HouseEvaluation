@@ -1,0 +1,18 @@
+@import "../../../Styles/Base";
+
+.graph-section {
+    width: 100%;
+    max-width: 1200px;
+    padding: $spacing-small;
+    margin-top: $spacing-default;
+    .charts-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-gap: $spacing-default;
+        margin: $spacing-default 0;
+        .chart-item {
+            text-align: center;
+        }
+    }
+
+}

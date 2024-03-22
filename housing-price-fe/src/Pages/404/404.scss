@@ -1,0 +1,19 @@
+@import "../../Styles/Base";
+
+.not-found-page {
+    height: 100vh;
+    width: 100vw;
+    padding: $spacing-big;
+    @include display-flex-center-column;
+
+    .white-container {
+        background-color: white;
+        padding: 100px;
+        border-radius: $radius-big;
+        box-shadow: $shadow-float;
+    }
+
+    img {
+        margin: 2rem 0;
+    }
+}

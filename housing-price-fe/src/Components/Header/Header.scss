@@ -1,0 +1,35 @@
+@import "../../Styles/Base";
+
+.header {
+    position: fixed;
+    width: 100vw;
+    height: 50px;
+    padding: $spacing-small;
+    background-color: $color-primary-hover;
+    box-shadow: $shadow-float;
+    @include display-flex-center-row;
+    justify-content: space-between;
+
+    div {
+        @include display-flex-center-row;
+        img {
+            height: 30px;
+            width: 30px;
+        }
+
+        h2 {
+            color: $color-font;
+            user-select: none;
+            margin-left: $spacing-default;
+        }
+    }
+
+    ul {
+        list-style: none;
+        @include display-flex-center-row;
+        li {
+            margin-left: $spacing-default;
+            cursor: pointer;
+        }
+    }
+}

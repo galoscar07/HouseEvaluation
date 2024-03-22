@@ -1,0 +1,32 @@
+version: '3.9'
+
+services:
+    housing_price_api:
+        volumes:
+            - static:/static
+        env_file:
+            - .env
+        build:
+            context: ./housing_price_api
+        ports:
+            - "8000:8000"
+    housing-price-fe:
+        build:
+            context: ./housing-price-fe
+        volumes:
+            - housing-price-fe:/app/build
+    nginx:
+        build:
+            context: ./nginx
+        volumes:
+            - static:/static
+            - housing-price-fe:/var/www/housing-price-fe
+        ports:
+            - "80:80"
+        depends_on:
+            - housing_price_api
+            - housing-price-fe
+
+volumes:
+    static:
+    housing-price-fe:

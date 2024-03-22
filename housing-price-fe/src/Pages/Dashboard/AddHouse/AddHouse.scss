@@ -1,0 +1,47 @@
+@import "../../../Styles/Base";
+
+.wrapper-add-house {
+    padding: $spacing-small;
+    margin-top: $spacing-default;
+
+    h1 {
+        margin-bottom: $spacing-default;
+    }
+
+    .add-house-form {
+        width: 80%;
+        margin: auto;
+    }
+
+    .button-wrapper {
+        @include display-flex-center-row;
+    }
+
+    .input-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: $spacing-default;
+        margin-bottom: 10px;
+    }
+
+    label {
+        display: flex;
+        flex-direction: column;
+    }
+
+    input {
+        margin-top: 5px;
+    }
+
+    button {
+        background-color: $color-primary;
+        color: #fff;
+        font-size: $font-normal;
+        padding: $spacing-small $spacing-big;
+        border: 1px solid transparent;
+        border-radius: $radius-small;
+        font-weight: $font-weight-medium;
+        margin: $spacing-default 0;
+        cursor: pointer;
+    }
+}

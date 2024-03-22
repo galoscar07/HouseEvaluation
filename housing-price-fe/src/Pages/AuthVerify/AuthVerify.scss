@@ -1,0 +1,7 @@
+@import "../../Styles/Base";
+
+.verify {
+    .container {
+        @include display-flex-center-column;
+    }
+}

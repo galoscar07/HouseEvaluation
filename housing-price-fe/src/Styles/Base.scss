@@ -1,0 +1,125 @@
+// COLORS ---------------------------------------------
+$color-primary: #17616C;
+$color-primary-hover: #A2C0C4;
+$color-primary-pressed: #0E3A41;
+$color-green: #1F734E;
+$color-blue: #33435B;
+$color-dark-blue: #09272B;
+$color-grey-disabled: #99A1AD;
+$color-secondary: #f34455;
+$color-font: #09272B;
+$color-grey-light: #DADADA;
+$color-disabled: #ccc;
+$color-background: #E2E3E7;
+
+$color-black: #010101;
+$color-white: #ffffff;
+
+
+// Mixins
+@mixin display-flex-center-column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@mixin display-flex-center-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+// FONT FAMILY --------------------------------------------
+$font-family: 'Roboto', sans-serif;
+
+// FONT SIZES ---------------------------------------------
+$font-small: 0.87rem; //14px;
+$font-normal: 1rem; //16px
+$font-medium: 1.25rem; //20px
+$font-subtitle: 1.75rem; //28px
+$font-title: 2rem; //48px
+$font-big-title: 3rem; //48px
+
+
+// FONT WEIGHTS ---------------------------------------------
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+// MARGINS ---------------------------------------------
+$spacing-xsmall: 5px;
+$spacing-small: 10px;
+$spacing-default: 20px;
+$spacing-medium: 30px;
+$spacing-big: 50px;
+
+// RADIUSES ---------------------------------------------
+$radius-small: 5px;
+$radius-medium: 15px;
+$radius-big: 30px;
+$radius-round: 50%;
+
+// SHADOWS ---------------------------------------------
+$shadow-float: 0 5px 15px rgba(0, 0, 0, 0.35);
+$shadow-small: 0 3px 6px 0 rgba(black, 0.2);
+
+// ANIMATION FUNCTIONS ---------------------------------------------
+$ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+$ease-in: cubic-bezier(0.4, 0, 1, 1);
+$bouncy-in: cubic-bezier(0.36, 0.06, 0.42, -0.78);
+$bouncy-out: cubic-bezier(0.48, 2, 0.53, 0.99);
+$big-bouncy-out: cubic-bezier(0.42, 2.94, 0.83, 0.67);
+
+// SCREEN WIDTHS ---------------------------------------------
+$desktop: 1920px;
+$big-laptop: 1440px;
+$small-laptop: 1280px;
+$tablet-landscape-width: 1024px;
+/* From generic tablet downwards */
+$tablet-portrait-width: 768px;
+$mobile-big-width: 500px;
+/* For phones and below */
+
+
+// DEFAULT STYLES TAGS ---------------------------------------------
+a {
+  text-decoration: none;
+  font-size: $font-normal;
+  color: $color-font;
+  margin-right: $spacing-medium;
+  transition: color 0.1s $ease-in, text-shadow 0.1s $ease-in-out;
+
+  &:hover {
+    color: $color-primary;
+    text-shadow: 0 3px 8px 0 rgba(black, 0.2);
+  }
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+input,
+select,
+option {
+  border: 1px solid $color-primary;
+  border-radius: $radius-small;
+  padding: $spacing-small;
+  box-shadow: $shadow-small;
+  color: $color-blue;
+  margin: $spacing-xsmall 0;
+  width: 100%;
+  outline-color: $color-primary-pressed;
+
+  &.error {
+    border: 1px solid $color-secondary !important;
+    color: $color-secondary;
+  }
+
+  &.full-width {
+    width: 100%;
+  }
+}

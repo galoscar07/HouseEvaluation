@@ -1,0 +1,39 @@
+@import "../../Styles/Base";
+
+.notification-popup {
+    background-color: #ffffff;
+    border: 2px solid $color-black;
+    padding: $spacing-small;
+    width: auto;
+    height: 60px;
+    border-radius: $radius-small;
+    box-shadow: $shadow-small;
+    transition: opacity 0.3s $ease-in-out;
+    opacity: 1;
+    margin: $spacing-small auto;
+
+    &.success {
+        background-color: rgba($color-green, 0.2);
+        border-color: $color-green;
+    }
+    &.error {
+        background-color: rgba($color-secondary, 0.2);
+        border-color: $color-secondary;
+    }
+
+    .popup-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+    }
+
+    .close-btn {
+        cursor: pointer;
+        font-size: 20px;
+        color: #000000;
+    }
+
+}
+
+

@@ -1,0 +1,41 @@
+@import "../../../Styles/Base";
+
+.table-section {
+    padding: $spacing-small;
+    margin-top: $spacing-default;
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        overflow: scroll;
+        display: block;
+
+        tbody {
+            overflow-y: scroll;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr {
+            cursor: pointer;
+            background-color: rgba($color-primary, 0.2);
+
+            &:nth-child(even) {
+                background-color: rgba($color-primary, 0.4);
+            }
+            &:hover {
+                background-color: rgba($color-green, 0.2);
+            }
+            &.selected {
+                background-color: rgba($color-green, 0.6) !important; /* Important because the even selector overwrites */
+            }
+        }
+    }
+}
